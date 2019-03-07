@@ -3,7 +3,7 @@
         <Head>帮助中心</Head>
         <div class="actless">
             <van-collapse v-model="activeNames">
-                    <van-collapse-item v-for="act in actList" :title="act.title" :name="act.name">
+                    <van-collapse-item v-for="(act,index) in actList"  :key="index" :title="act.title" :name="act.name">
                         {{act.text}}
                     </van-collapse-item>
             </van-collapse>

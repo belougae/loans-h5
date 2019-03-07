@@ -1,7 +1,7 @@
 <template>
     <div class="recommend_box">
         <van-tabs @click="onClick" v-model="active">
-            <van-tab v-for="index in tables" :title="index.title"><airdrop :message="dataList" :commend="1"></airdrop></van-tab>
+            <van-tab v-for="(tab,index) in tables" :key="index" :title="tab.title"><airdrop :message="dataList" :commend="1"></airdrop></van-tab>
             <!-- <van-tab title="最新口子">最新口子</van-tab> -->
         </van-tabs>
     </div>
